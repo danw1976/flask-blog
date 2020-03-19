@@ -54,7 +54,7 @@ def main():
     g.db.close()
     return render_template('main.html', posts=posts)
 
-@app.rout('/add', methods=['POST'])
+@app.route('/add', methods=['POST'])
 @login_required
 def add():
     title = request.form['title']
